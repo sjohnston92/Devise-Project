@@ -1,2 +1,12 @@
-<h1>Todos#new</h1>
-<p>Find me in app/views/todos/new.html.erb</p>
+<h1>Add To-Do</h1>
+<%= form_with(model: @todo, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Name of Todo" %>
+  </div>
+   <div class="field">
+    <%= f.label :item %>
+    <%= f.text_field :item, required: true, placeholder: "Item on the Todo" %>
+  </div>
+  <%= f.submit %>
+<% end %>
