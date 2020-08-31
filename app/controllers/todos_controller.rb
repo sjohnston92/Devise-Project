@@ -1,4 +1,6 @@
 class TodosController < ApplicationController
+  before_action :set_todos, only: [:show, :edit, :update]
+
   def index
     @todos = current_user.todos
   end
