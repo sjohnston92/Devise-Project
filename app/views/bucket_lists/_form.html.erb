@@ -1,0 +1,9 @@
+<h1><%= @bucket_list.id ? 'Edit List Item' : 'Create List Item' %></h1>
+<hr />
+<%= form_for @bucket_list do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <%= f.label :location %>
+  <%= f.text_field :location, required: true %>
+  <%= f.submit %>
+<% end %>

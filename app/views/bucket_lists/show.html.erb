@@ -1,2 +1,5 @@
-<h1>BucketLists#show</h1>
-<p>Find me in app/views/bucket_lists/show.html.erb</p>
+<<ul>
+  <% @bucket_lists.each do |bucket_list| %>
+    <li><%= link_to bucket_list.name, bucket_list %></li>
+  <% end %>
+</ul>
