@@ -1,2 +1,11 @@
-<h1>Todos#show</h1>
-<p>Find me in app/views/todos/show.html.erb</p>
+<h1>Hello, <%= current_user.first_name %></h1>
+<hr />
+<h4>Here is the <%= @todo.name %></h4>
+
+
+
+<br>
+<%= link_to "Back", todos_path, class:"btn btn-primary" %>
+<br>
+<br>
+<%= link_to 'Delete Todo', @todo, method: :delete, class: "btn btn-danger" %>

@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todos, only: [:show, :edit, :update]
+  before_action :set_todo, only: [:show, :edit, :update, :destroy]
 
   def index
     @todos = current_user.todos
@@ -33,6 +33,7 @@ class TodosController < ApplicationController
   end
 
   def destroy
+    
     @todo.destroy
     redirect_to accounts_path
   end
