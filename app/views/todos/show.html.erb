@@ -1,9 +1,14 @@
 <h1>Hello, <%= current_user.first_name %></h1>
 <hr />
 <h4>Here is the <%= @todo.name %></h4>
+<br>
+<h6>Item on your Todo: </h6>
+<br>
+<%=@todo.item%>
+<br>
 
 
-
+<br>
 <br>
 <%= link_to "Back", todos_path, class:"btn btn-primary" %>
 <br>

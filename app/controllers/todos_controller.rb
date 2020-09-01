@@ -33,9 +33,8 @@ class TodosController < ApplicationController
   end
 
   def destroy
-    
     @todo.destroy
-    redirect_to accounts_path
+    redirect_to todos_path(@todo)
   end
 
   private
